@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: linueks-inf-3331-mandelbrot
+Version: 0.1
+Summary: package for mandelbrot image generation using basic python-, numba- and numpy-implementations
+Home-page: whatever.com
+Author: linueks
+Author-email: linueks@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

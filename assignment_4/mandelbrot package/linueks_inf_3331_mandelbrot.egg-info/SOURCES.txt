@@ -1,0 +1,8 @@
+setup.py
+linueks_inf_3331_mandelbrot.egg-info/PKG-INFO
+linueks_inf_3331_mandelbrot.egg-info/SOURCES.txt
+linueks_inf_3331_mandelbrot.egg-info/dependency_links.txt
+linueks_inf_3331_mandelbrot.egg-info/requires.txt
+linueks_inf_3331_mandelbrot.egg-info/top_level.txt
+mandel/__init__.py
+mandel/mandel.py

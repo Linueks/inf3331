@@ -1,0 +1,15 @@
+int: 38;5;1
+float: 38;5;1
+scientific: 38;5;215
+loops: 38;5;213
+matrix: 38;5;114
+plot: 38;5;195
+dots: 38;5;11
+format: 38;5;97
+formatThis: 38;5;70
+clean: 38;5;50
+cleanThis: 38;5;50
+operators: 38;5;231
+bools: 38;5;119
+comment: 38;5;245
+string: 38;5;150

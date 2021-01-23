@@ -1,0 +1,12 @@
+"def": def
+"(?<=def ).*(?=\()": functionName
+" (return|if|else|elif|for|while|in|pass|break|)": special1
+" (None|True|False|[0-9])": special2
+" (range|len|__init__|__call__)": special3
+"print(?=\()": print
+"from|import": import
+"'.+?'": string
+"#.*(?=\n)": comment
+"class": class
+"(?<=class )[^\(\:]*": className
+"self": self

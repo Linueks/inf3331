@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Skalle</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .container {
+        width: 960px;
+        margin: 20px auto;
+        box-sizing: border-box;
+      }
+
+      img.chart {
+        margin: 0;
+      }
+
+      .params {
+        background: #eee;
+        border-radius: 3px;
+        border-bottom: 20px;
+        padding: 12px;
+        margin: 20px;
+      }
+
+      .columns {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .columns * {
+        flex: 1;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="{{ url_for('static', filename="docs.html") }}">Module documentation</a>
+      <form action="/" method="get">
+        <div class="columns">
+          <div>
+            <div class="params">
+              <h4>CO&#8322;</h4>
+              <div>
+                <label>Min year</label>
+                <input type="number" name="co2_minyear" value="{{ params.get('co2_minyear', 1816) }}" />
+              </div>
+              <div>
+                <label>Max year</label>
+                <input type="number" name="co2_maxyear" value="{{ params.get('co2_maxyear', 2012) }}" />
+              </div>
+
+              <button type="submit">Update</button>
+            </div>
+            <img class="chart" width="100%" src="/co2.png{{ co2_query_string }}" />
+          </div>
+          <div>
+            <div class="params">
+              <h4>Temperature</h4>
+
+              <div>
+                <label>Min year</label>
+                <input type="number" name="temp_minyear" value="{{ params.get('temp_minyear', 1816) }}" />
+              </div>
+              <div>
+                <label>Max year</label>
+                <input type="number" name="temp_maxyear" value="{{ params.get('temp_maxyear', 2012) }}" />
+              </div>
+              <div>
+                <label>Month</label>
+                <select name="temp_month">
+                  {% for month in ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Oktober", "November", "Desember"] %}
+                    <option value="{{month}}" {{ "selected" if month == params.get("temp_month", "January") else ""}}>{{month}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <button type="submit">Update</button>
+            </div>
+            <img class="chart" width="100%" src="/temp.png{{temp_query_string}}" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
